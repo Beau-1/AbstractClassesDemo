@@ -17,11 +17,11 @@ namespace ConsoleUI
             #region Vehicles
 
             /*
-             * Create an abstract class called Vehicle
-             * The vehicle class shall have three string properties Year, Make, and Model
-             * Set the defaults to something generic in the Vehicle class
-             * Vehicle shall have an abstract method called DriveAbstract with no implementation
-             * Vehicle shall have a virtual method called DriveVirtual with a base implementation.
+             * Create an abstract class called Vehicle - Done
+             * The vehicle class shall have three string properties Year, Make, and Model - Done
+             * Set the defaults to something generic in the Vehicle class - Done
+             * Vehicle shall have an abstract method called DriveAbstract with no implementation - Done
+             * Vehicle shall have a virtual method called DriveVirtual with a base implementation. - Done
              */
 
             /* 
@@ -32,12 +32,18 @@ namespace ConsoleUI
             */
 
             // Create a list of Vehicle called vehicles
-
+            var vehicles = new List<Vehicle>();
             /*
              * Create 4 instances: 1 Car, 1 Motorcycle, and then 2 instances of type Vehicle (use explicit typing) but use constuctors from derived classes
              * 
+             
              * Set the properties with object initializer syntax
              */
+            var spectra = new Car() { HasTrunk = true, Make = "Kia", Model = "Spectra", Year = 2013 };
+            var motorcycle = new Motorcycle() { HasSideCar = true, Make = "Harly", Model = "RoadKing", Year = 1993 };
+
+            var truck = new Car() { HasTrunk = true, Make = "Ford", Model = "Ranger", Year = 2000 };
+            var coop = new Car() { HasTrunk = true, Make = "Chevy", Model = "StingRay", Year = 2006 };
 
             /*
              * Add the 4 vehicles to the list

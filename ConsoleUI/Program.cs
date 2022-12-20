@@ -25,10 +25,10 @@ namespace ConsoleUI
              */
 
             /* 
-             * Now create 2 non-abstract classes: Car and Motorcycle, that inherit from Vehicle
-             * Add a distict property in the 2 derived classes such as HasTrunk for Car and HasSideCart for Motorcycle
-             * Provide the implementations for the abstract methods
-             * Only in the Motorcycle class will you override the virtual drive method
+             * Now create 2 non-abstract classes: Car and Motorcycle, that inherit from Vehicle - Done
+             * Add a distict property in the 2 derived classes such as HasTrunk for Car and HasSideCart for Motorcycle -Done
+             * Provide the implementations for the abstract methods - Done
+             * Only in the Motorcycle class will you override the virtual drive method -Done
             */
 
             // Create a list of Vehicle called vehicles
@@ -42,14 +42,23 @@ namespace ConsoleUI
             var spectra = new Car() { HasTrunk = true, Make = "Kia", Model = "Spectra", Year = 2013 };
             var motorcycle = new Motorcycle() { HasSideCar = true, Make = "Harly", Model = "RoadKing", Year = 1993 };
 
-            var truck = new Car() { HasTrunk = true, Make = "Ford", Model = "Ranger", Year = 2000 };
-            var coop = new Car() { HasTrunk = true, Make = "Chevy", Model = "StingRay", Year = 2006 };
+            Vehicle truck = new Car() { HasTrunk = true, Make = "Ford", Model = "Ranger", Year = 2000 };
+            Vehicle coop = new Car() { HasTrunk = true, Make = "Chevy", Model = "StingRay", Year = 2006 };
 
             /*
              * Add the 4 vehicles to the list
              * Using a foreach loop iterate over each of the properties
              */
+            vehicles.Add(spectra);
+            vehicles.Add(motorcycle);
+            vehicles.Add(truck);
+            vehicles.Add(coop);
 
+            foreach(var Vehicle in vehicles)
+            {
+                Console.WriteLine($"Make {Vehicle.Make} Model {Vehicle.Model} Year {Vehicle.Year}");
+                Vehicle.DriveAbstract();
+            }
             // Call each of the drive methods for one car and one motorcycle
 
             #endregion            
